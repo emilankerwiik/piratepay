@@ -1,4 +1,5 @@
 // Navbar component for Piratepay.ai
+// Updated with Stripe-inspired design
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -31,27 +32,29 @@ export default function Navbar() {
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled || !isHomePage
-          ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm' 
+          ? 'bg-white/95 dark:bg-accent/95 backdrop-blur-md shadow-sm border-b border-border dark:border-border' 
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-6 lg:px-8">
+      <div className="max-w-7xl mx-auto flex items-center justify-between p-4 lg:px-8">
         <div className="flex items-center">
-          <Link href="/">
+          <Link href="/" className="flex items-center">
             <Image
               src="/piratepay-logo.svg"
               alt="Piratepay.ai Logo"
-              width={180}
-              height={45}
+              width={150}
+              height={40}
               priority
+              className="h-10 w-auto"
             />
           </Link>
         </div>
         
         {/* Mobile menu button */}
         <button 
-          className="md:hidden flex items-center"
+          className="md:hidden flex items-center text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -70,24 +73,24 @@ export default function Navbar() {
         </button>
         
         {/* Desktop menu */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-8">
           {isHomePage ? (
             <>
               <Link 
                 href="#features" 
-                className="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Features
               </Link>
               <Link 
                 href="#how-it-works" 
-                className="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 How It Works
               </Link>
               <Link 
                 href="#pricing" 
-                className="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 Pricing
               </Link>
@@ -95,7 +98,7 @@ export default function Navbar() {
           ) : (
             <Link 
               href="/" 
-              className="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Home
             </Link>
@@ -104,8 +107,8 @@ export default function Navbar() {
             href="/contact" 
             className={`text-sm font-medium ${
               pathname === '/contact' 
-                ? 'text-primary' 
-                : 'text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                ? 'text-foreground' 
+                : 'text-muted-foreground hover:text-foreground transition-colors'
             }`}
           >
             Contact
@@ -114,7 +117,7 @@ export default function Navbar() {
             href="https://book.stripe.com/3csbKncED80N5dC144"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-primary text-white px-4 py-2 text-sm font-medium hover:bg-opacity-90 transition-all"
+            className="btn-primary"
           >
             Reserve Your Seat
           </a>
@@ -123,27 +126,27 @@ export default function Navbar() {
       
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 px-6 py-4 shadow-md">
-          <div className="flex flex-col space-y-4">
+        <div className="md:hidden bg-background dark:bg-accent px-6 py-6 shadow-md border-b border-border dark:border-border">
+          <div className="flex flex-col space-y-6">
             {isHomePage ? (
               <>
                 <Link 
                   href="#features" 
-                  className="text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Features
                 </Link>
                 <Link 
                   href="#how-it-works" 
-                  className="text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   How It Works
                 </Link>
                 <Link 
                   href="#pricing" 
-                  className="text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Pricing
@@ -152,7 +155,7 @@ export default function Navbar() {
             ) : (
               <Link 
                 href="/" 
-                className="text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
+                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
@@ -162,8 +165,8 @@ export default function Navbar() {
               href="/contact" 
               className={`text-base font-medium ${
                 pathname === '/contact' 
-                  ? 'text-primary' 
-                  : 'text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary'
+                  ? 'text-foreground' 
+                  : 'text-muted-foreground hover:text-foreground transition-colors'
               }`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -173,7 +176,7 @@ export default function Navbar() {
               href="https://book.stripe.com/3csbKncED80N5dC144"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-primary text-white px-4 py-2 text-base font-medium hover:bg-opacity-90 transition-all inline-block text-center"
+              className="btn-primary text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Reserve Your Seat

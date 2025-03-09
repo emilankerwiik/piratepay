@@ -2,10 +2,16 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #0066CC;
-  --secondary: #FFD700;
-  --accent: #333333;
+  --foreground: #0a2540;
+  --primary: #635bff;
+  --primary-hover: #7a73ff;
+  --secondary: #00d4ff;
+  --accent: #0a2540;
+  --muted: #f6f9fc;
+  --muted-foreground: #425466;
+  --border: #e6ebf1;
+  --card: #ffffff;
+  --card-foreground: #0a2540;
 }
 
 @theme inline {
@@ -14,17 +20,28 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #3399FF;
-    --secondary: #FFD700;
-    --accent: #555555;
+    --background: #0a2540;
+    --foreground: #f6f9fc;
+    --primary: #7a73ff;
+    --primary-hover: #635bff;
+    --secondary: #00d4ff;
+    --accent: #f6f9fc;
+    --muted: #1a365d;
+    --muted-foreground: #a0aec0;
+    --border: #2d3748;
+    --card: #1a2e44;
+    --card-foreground: #f6f9fc;
   }
 }
 
@@ -32,4 +49,66 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Stripe-inspired button styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--foreground);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Stripe-inspired card styles */
+.stripe-card {
+  background-color: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.stripe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Stripe-inspired gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(150deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
