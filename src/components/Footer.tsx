@@ -5,24 +5,14 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-muted dark:bg-accent py-16 px-6 lg:px-8 border-t border-border dark:border-border">
+    <footer className="bg-background dark:bg-accent py-16 px-6 lg:px-8 border-t border-border dark:border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-12">
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-6">
-              <Image
-                src="/piratepay-logo.svg"
-                alt="Piratepay.ai Logo"
-                width={150}
-                height={38}
-                className="h-8 w-auto"
-              />
+              <span className="text-2xl font-bold">piratepay</span>
             </Link>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Enabling merchants to accept payments from AI agents. 
-              Our platform provides secure, reliable, and easy-to-integrate payment solutions.
-            </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-6">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                   <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
@@ -44,12 +34,32 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Product</h4>
+            <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Products</h4>
             <ul className="space-y-3">
-              <li><Link href="/#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</Link></li>
-              <li><Link href="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">How It Works</Link></li>
-              <li><Link href="/#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Payments</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Billing</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Connect</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Invoicing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Solutions</h4>
+            <ul className="space-y-3">
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">E-commerce</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">SaaS</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Marketplaces</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">AI Platforms</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Resources</h4>
+            <ul className="space-y-3">
               <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Documentation</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">API Reference</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Support</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
           
@@ -57,38 +67,34 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Company</h4>
             <ul className="space-y-3">
               <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">About</Link></li>
-              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Customers</Link></li>
               <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">Legal</h4>
-            <ul className="space-y-3">
-              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Privacy</Link></li>
-              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Terms</Link></li>
-              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Security</Link></li>
-              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Cookies</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="mt-16 pt-8 border-t border-border dark:border-border flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Piratepay.ai. All rights reserved.
+          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
+            © {new Date().getFullYear()} Piratepay, Inc. All rights reserved.
           </p>
-          <div className="mt-4 md:mt-0 flex items-center space-x-4">
-            <select className="bg-transparent text-muted-foreground text-sm border border-border rounded-md px-2 py-1">
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-            </select>
-            <select className="bg-transparent text-muted-foreground text-sm border border-border rounded-md px-2 py-1">
-              <option value="usd">USD $</option>
-              <option value="eur">EUR €</option>
-              <option value="gbp">GBP £</option>
-            </select>
+          <div className="flex items-center space-x-6">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Privacy
+            </Link>
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Cookie Settings
+            </Link>
+            <div className="flex items-center space-x-2">
+              <select className="bg-transparent text-muted-foreground text-sm border border-border rounded-md px-2 py-1">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>

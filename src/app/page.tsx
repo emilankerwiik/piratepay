@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,72 +8,78 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-6 pt-32 pb-24 lg:py-32 bg-gradient-to-br from-background via-background to-muted dark:from-accent dark:via-accent dark:to-background">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight">
-            Accept Payments from <span className="gradient-text">AI Agents</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Piratepay enables merchants to seamlessly accept payments from AI agents, 
-            unlocking a new frontier in commerce.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://book.stripe.com/3csbKncED80N5dC144"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Reserve Your Seat - $10
-            </a>
-            <Link
-              href="#how-it-works"
-              className="btn-secondary"
-            >
-              Learn More
-            </Link>
+      <section className="stripe-hero pt-32 pb-24 lg:py-32 px-6 lg:px-8">
+        <div className="stripe-hero-content max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
+              Capture payment volume from shopping agents.
+            </h1>
+            <p className="text-xl md:text-2xl opacity-90 mb-12 max-w-2xl">
+              Join first-movers that use Piratepay to accept payments online from millions of agents making purchases for humans.
+            </p>
+            
+            <div className="stripe-input-group max-w-md">
+              <input 
+                type="email" 
+                placeholder="Email address" 
+                className="stripe-input"
+              />
+              <button className="flex items-center">
+                Start now
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
           </div>
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="relative w-full max-w-6xl mt-20">
-          <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
-          <div className="relative bg-card border border-border rounded-xl shadow-lg overflow-hidden">
-            <div className="p-6 md:p-8">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary w-5 h-5">
-                      <path d="M20.91 8.84 8.56 2.23a1.93 1.93 0 0 0-1.81 0L3.1 4.13a2.12 2.12 0 0 0-.05 3.69l12.22 6.93a2 2 0 0 0 1.94 0L21 12.51a2.12 2.12 0 0 0-.09-3.67Z"></path>
-                      <path d="m3.09 8.84 12.35-6.61a1.93 1.93 0 0 1 1.81 0l3.65 1.9a2.12 2.12 0 0 1 .1 3.69L8.73 14.75a2 2 0 0 1-1.94 0L3 12.51a2.12 2.12 0 0 1 .09-3.67Z"></path>
-                      <line x1="12" x2="12" y1="22" y2="13"></line>
-                      <path d="M20 13.5v3.37a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13.5"></path>
-                    </svg>
+          
+          <div className="relative hidden lg:block">
+            <div className="absolute -top-10 -left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            
+            <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl overflow-hidden shadow-2xl">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white w-5 h-5">
+                        <path d="M20.91 8.84 8.56 2.23a1.93 1.93 0 0 0-1.81 0L3.1 4.13a2.12 2.12 0 0 0-.05 3.69l12.22 6.93a2 2 0 0 0 1.94 0L21 12.51a2.12 2.12 0 0 0-.09-3.67Z"></path>
+                        <path d="m3.09 8.84 12.35-6.61a1.93 1.93 0 0 1 1.81 0l3.65 1.9a2.12 2.12 0 0 1 .1 3.69L8.73 14.75a2 2 0 0 1-1.94 0L3 12.51a2.12 2.12 0 0 1 .09-3.67Z"></path>
+                        <line x1="12" x2="12" y1="22" y2="13"></line>
+                        <path d="M20 13.5v3.37a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13.5"></path>
+                      </svg>
+                    </div>
+                    <span className="font-medium text-white">AI Payment Dashboard</span>
                   </div>
-                  <span className="font-medium">AI Payment Demo</span>
                 </div>
-                <div className="flex space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                
+                <div className="space-y-4">
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-white/80 text-sm">Today&apos;s Volume</span>
+                      <span className="text-white/60 text-xs">Updated 5m ago</span>
+                    </div>
+                    <div className="text-2xl font-bold text-white">$24,892.50</div>
+                    <div className="mt-1 text-green-400 text-sm flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-1"><path d="m6 9 6-6 6 6"/><path d="M6 12h12"/><path d="m6 15 6 6 6-6"/></svg>
+                      +18.3% from yesterday
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/10 rounded-lg p-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-white/80 text-sm">AI Agent Transactions</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <div>
+                        <div className="text-2xl font-bold text-white">1,284</div>
+                        <div className="mt-1 text-white/60 text-sm">Total today</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-white">$19.38</div>
+                        <div className="mt-1 text-white/60 text-sm">Avg. value</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-muted dark:bg-accent/50 rounded-lg p-4 font-mono text-sm text-muted-foreground overflow-x-auto">
-                <pre><code>{`// Example: AI agent making a payment
-const payment = await piratepay.createPayment({
-  amount: 2500,
-  currency: 'usd',
-  description: 'Purchase made by AI assistant',
-  metadata: {
-    aiAgent: 'shopping-assistant-v1',
-    userAuthToken: 'jwt_verified_user_session',
-    merchantId: 'merchant_1234567890'
-  }
-});
-
-// Payment successful
-console.log(payment.status); // 'succeeded'`}</code></pre>
               </div>
             </div>
           </div>
@@ -86,7 +91,6 @@ console.log(payment.status); // 'succeeded'`}</code></pre>
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-muted-foreground text-sm font-medium mb-8">TRUSTED BY INNOVATIVE COMPANIES</p>
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-            {/* These would be actual logos in a real implementation */}
             {['Company 1', 'Company 2', 'Company 3', 'Company 4', 'Company 5'].map((company, i) => (
               <div key={i} className="h-8 flex items-center">
                 <span className="text-muted-foreground/50 font-semibold">{company}</span>
@@ -101,10 +105,10 @@ console.log(payment.status); // 'succeeded'`}</code></pre>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 text-foreground">
-              Why Choose Piratepay?
+              Built for the AI commerce revolution
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our platform is built specifically for the emerging AI commerce ecosystem.
+              Our platform is designed specifically for merchants who want to capture the growing market of AI-powered shopping.
             </p>
           </div>
           
@@ -251,92 +255,25 @@ console.log(payment.status); // 'succeeded'`}</code></pre>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-24 px-6 lg:px-8 bg-background dark:bg-accent/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-foreground">
-              Early Access Pricing
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Be among the first to integrate Piratepay and shape the future of AI-powered commerce.
-            </p>
-          </div>
-          
-          <div className="max-w-lg mx-auto stripe-card border-2 border-primary/20 hover:border-primary/30 transition-colors">
-            <div className="bg-primary/10 p-8 text-center">
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Founder&apos;s Circle</h3>
-              <p className="text-muted-foreground">Limited early access</p>
-            </div>
-            <div className="p-8">
-              <div className="flex justify-center items-baseline mb-8">
-                <span className="text-5xl font-extrabold text-foreground">$10</span>
-                <span className="text-muted-foreground ml-2">one-time payment</span>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center">
-                  <div className="mr-3 flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 text-primary">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </div>
-                  <span className="text-muted-foreground">Early access to the platform</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="mr-3 flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 text-primary">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </div>
-                  <span className="text-muted-foreground">Priority integration support</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="mr-3 flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 text-primary">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </div>
-                  <span className="text-muted-foreground">Influence product roadmap</span>
-                </li>
-                <li className="flex items-center">
-                  <div className="mr-3 flex-shrink-0 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3 h-3 text-primary">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                  </div>
-                  <span className="text-muted-foreground">Discounted transaction fees at launch</span>
-                </li>
-              </ul>
-              <div className="text-center">
-                <a
-                  href="https://book.stripe.com/3csbKncED80N5dC144"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary w-full inline-block"
-                >
-                  Reserve Your Seat
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24 px-6 lg:px-8 gradient-bg text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to join the AI commerce revolution?</h2>
           <p className="text-xl mb-10 opacity-90">
-            Secure your spot in our Founder&apos;s Circle and be among the first to integrate Piratepay.
+            Start accepting payments from AI shopping agents today and stay ahead of the competition.
           </p>
-          <a
-            href="https://book.stripe.com/3csbKncED80N5dC144"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-primary hover:bg-opacity-90 transition-all font-semibold px-8 py-4 rounded-full inline-block"
-          >
-            Get Started Today
-          </a>
+          
+          <div className="stripe-input-group max-w-md mx-auto">
+            <input 
+              type="email" 
+              placeholder="Email address" 
+              className="stripe-input"
+            />
+            <button className="flex items-center">
+              Start now
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
         </div>
       </section>
 

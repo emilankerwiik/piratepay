@@ -2,7 +2,6 @@
 // Updated with Stripe-inspired design
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -59,7 +58,7 @@ export default function Contact() {
                   id="subject"
                   name="subject"
                   className="w-full px-4 py-2 border border-border rounded-md bg-background dark:bg-accent/50 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
               

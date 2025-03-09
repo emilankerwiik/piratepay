@@ -12,6 +12,7 @@
   --border: #e6ebf1;
   --card: #ffffff;
   --card-foreground: #0a2540;
+  --stripe-gradient: linear-gradient(150deg, #7533e2 0%, #e5226b 50%, #f5a623 100%);
 }
 
 @theme inline {
@@ -42,6 +43,7 @@
     --border: #2d3748;
     --card: #1a2e44;
     --card-foreground: #f6f9fc;
+    --stripe-gradient: linear-gradient(150deg, #7533e2 0%, #e5226b 50%, #f5a623 100%);
   }
 }
 
@@ -102,7 +104,7 @@ body {
 
 /* Stripe-inspired gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(150deg, var(--primary) 0%, var(--secondary) 100%);
+  background: var(--stripe-gradient);
 }
 
 .gradient-text {
@@ -111,4 +113,84 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+/* Stripe-inspired hero section */
+.stripe-hero {
+  background: var(--stripe-gradient);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.stripe-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(117, 51, 226, 0.4) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.stripe-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(245, 166, 35, 0.4) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.stripe-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Stripe-inspired form input */
+.stripe-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background-color: white;
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.stripe-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.stripe-input-group {
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(50, 50, 93, 0.1), 0 1px 1px rgba(0, 0, 0, 0.07);
+}
+
+.stripe-input-group input {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+}
+
+.stripe-input-group button {
+  border-radius: 0;
+  padding: 0 1.5rem;
+  background-color: #0a2540;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stripe-input-group button:hover {
+  background-color: #0d2f4f;
 }
