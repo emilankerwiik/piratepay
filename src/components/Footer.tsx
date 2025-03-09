@@ -1,6 +1,5 @@
 // Footer component for Piratepay.ai
 // Updated with Stripe-inspired design
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
