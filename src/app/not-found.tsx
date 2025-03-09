@@ -26,7 +26,7 @@ export default function NotFound() {
           Treasure Not Found
         </h2>
         <p className="text-xl text-muted-foreground mb-8">
-          Arrr! The page you're looking for has sailed away to unknown waters.
+          Arrr! The page you&apos;re looking for has sailed away to unknown waters.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -58,7 +58,7 @@ export default function NotFound() {
             </div>
           </div>
           <p className="text-muted-foreground text-sm">
-            The page you're looking for might have been moved, deleted, or never existed. 
+            The page you&apos;re looking for might have been moved, deleted, or never existed. 
             Check the URL for typos or navigate back to our homepage.
           </p>
         </div>

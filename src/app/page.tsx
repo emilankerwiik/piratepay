@@ -265,7 +265,7 @@ console.log(payment.status); // 'succeeded'`}</code></pre>
           
           <div className="max-w-lg mx-auto stripe-card border-2 border-primary/20 hover:border-primary/30 transition-colors">
             <div className="bg-primary/10 p-8 text-center">
-              <h3 className="text-2xl font-bold mb-2 text-foreground">Founder's Circle</h3>
+              <h3 className="text-2xl font-bold mb-2 text-foreground">Founder&apos;s Circle</h3>
               <p className="text-muted-foreground">Limited early access</p>
             </div>
             <div className="p-8">
@@ -327,7 +327,7 @@ console.log(payment.status); // 'succeeded'`}</code></pre>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to join the AI commerce revolution?</h2>
           <p className="text-xl mb-10 opacity-90">
-            Secure your spot in our Founder's Circle and be among the first to integrate Piratepay.
+            Secure your spot in our Founder&apos;s Circle and be among the first to integrate Piratepay.
           </p>
           <a
             href="https://book.stripe.com/3csbKncED80N5dC144"

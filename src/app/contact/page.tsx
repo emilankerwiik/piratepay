@@ -16,7 +16,7 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-xl text-muted-foreground">
-              Have questions about Piratepay? We're here to help!
+              Have questions about Piratepay? We&apos;re here to help!
             </p>
           </div>
 
