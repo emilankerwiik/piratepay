@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created for Piratepay.ai - A logo for a startup that enables merchants to accept payments from AI agents -->
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pirate hat -->
+  <path d="M30 10C30 10 35 5 45 10C45 10 50 15 45 20C45 20 40 25 30 20C30 20 25 15 30 10Z" fill="#333333"/>
+  <path d="M30 10C30 10 35 15 45 10" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="40" cy="15" r="2" fill="#FFD700"/>
+  
+  <!-- P for Piratepay -->
+  <path d="M60 15H70C75 15 75 25 70 25H60V15Z" fill="#333333"/>
+  <path d="M60 15V35" stroke="#333333" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="85" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#333333">iratepay</text>
+  <text x="170" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#0066CC">.ai</text>
+</svg> 
