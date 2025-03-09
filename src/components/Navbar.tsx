@@ -101,6 +101,17 @@ export default function Navbar() {
             >
               Pricing
             </Link>
+
+            <Link 
+              href="/openai-test" 
+              className={`text-sm font-medium ${
+                pathname === '/openai-test' 
+                  ? 'text-primary' 
+                  : 'hover:opacity-80 transition-opacity'
+              }`}
+            >
+              OpenAI Test
+            </Link>
           </div>
           
           <div className="flex items-center gap-4">
@@ -152,6 +163,18 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pricing
+            </Link>
+
+            <Link 
+              href="/openai-test" 
+              className={`text-base font-medium ${
+                pathname === '/openai-test' 
+                  ? 'text-primary' 
+                  : 'text-muted-foreground hover:text-foreground transition-colors'
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              OpenAI Test
             </Link>
             
             <Link 
